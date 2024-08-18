@@ -1,0 +1,37 @@
+{
+  "name": "onetext-temporal",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "tsc --build",
+    "build.watch": "tsc --build --watch",
+    "client": "ts-node src/client.ts",
+    "format": "prettier --write .",
+    "worker": "ts-node src/worker.ts",
+    "worker.watch": "nodemon src/worker.ts"
+  },
+  "nodemonConfig": {
+    "execMap": {
+      "ts": "ts-node"
+    },
+    "ext": "ts",
+    "watch": [
+      "src"
+    ]
+  },
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "@temporalio/activity": "^1.11.1",
+    "@temporalio/client": "^1.11.1",
+    "@temporalio/common": "^1.11.1",
+    "@temporalio/worker": "^1.11.1",
+    "@temporalio/workflow": "^1.11.1",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.4.0",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
